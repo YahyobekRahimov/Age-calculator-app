@@ -1,37 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./styles/style.css">
+
   <title>Frontend Mentor | Age calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
+  <main class="main">
 
-  Day
-  DD
+    <div class="container main__container">
 
-  Month
-  MM
+      <div class="container__calculator-block">
 
-  Year
-  YYYY
+        <div class="calculator-block__inputs-group">
 
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+          <div class="input-label-wrapper">
+            <label id="input-day-label" for="input-day">DAY</label>
+            <input id="input-day" placeholder="DD" type="number">
+            <div id="error-message--day"></div>
+          </div>
+
+          <div class="input-label-wrapper">
+            <label id="input-month-label" for="input-month">MONTH</label>
+            <input id="input-month" placeholder="MM" type="number">
+            <div id="error-message--month"></div>
+          </div>
+
+          <div class="input-label-wrapper">
+            <label id="input-year-label" for="input-year">YEAR</label>
+            <input id="input-year" placeholder="YYYY" type="number">
+            <div id="error-message--year"></div>
+          </div>
+
+        </div>
+
+        <div class="button-and-hr-wrapper">
+
+          <div class="horizontal-line">
+
+          </div>
+          <button onclick="inputValidation()" class="arrow-icon">
+            <img src="./images/icon-arrow.svg" alt="icon arrow">
+          </button>
+        </div>
+
+        <h2 class="calculator-block__result">
+          <span class="result--year">- -</span> years
+        </h2>
+        <h2 class="calculator-block__result">
+          <span class="result--months">- -</span> months
+        </h2>
+        <h2 class="calculator-block__result">
+          <span class="result--days">- -</span> days
+        </h2>
+
+      </div>
+
+    </div>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+  </main>
+
+  <script src="./js/app.js"></script>
 </body>
+
 </html>
